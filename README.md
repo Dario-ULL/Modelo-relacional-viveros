@@ -2,32 +2,33 @@
 
 ## 1. Entidades:
 
-     - vivero (codigo_vivero, nombre, latitud, longitud);
-     - empleado (codigo_empleado, nombre, primer_apellido, segundo_apellido, fecha_ingreso, dni, productividad);
-     - pedido (codigo_pedido, fecha, codigo_empleado, codigo_cliente);
-     - cliente_fidelizado (codigo_cliente, nombre, primer_apellido, segundo_apellido, bonificacion, telefono, fecha_registro, compra_total, fecha);
-     - zona (codigo_zona, nombre, latitud, longitud, productividad);
-     - producto (codigo_producto, nombre, precio, descripción);
-     - historico_puesto (codigo_empleado, codigo_vivero, fecha);
+     - Vivero (codigo_vivero, nombre, latitud, longitud);
+     - Empleado (codigo_empleado, nombre, primer_apellido, segundo_apellido, fecha_ingreso, dni, productividad);
+     - Pedido (codigo_pedido, fecha, codigo_empleado, codigo_cliente);
+     - Cliente_fidelizado (codigo_cliente, nombre, primer_apellido, segundo_apellido, bonificacion, telefono, fecha_registro, compra_total, fecha);
+     - Zona ((codigo_vivero, codigo_zona), nombre, latitud, longitud, productividad);
+     - Producto (codigo_producto, nombre, precio, descripción);
+     - Historico_puesto (codigo_empleado, codigo_vivero, fecha);
 
 ## 2. Relaciones: 
 
 ### 1. Relacion Debil
-     - vivero-zona (codigo_vivero, codigo_zona, nombre, latitud, longitud, productividad);
+     - vivero-zona ((codigo_vivero, codigo_zona), nombre, latitud, longitud, productividad);
+La entidad Zona es débil por lo que la tabla del mismo se genera usando como clave primaria codigo_vivero(FK) de Vivero y codigo_zona.
 
 ### 2. Relaciones 1:N
 
-     - vivero-empleado [Empleado] (codigo_empleado, nombre, primer_apellido, segundo_apellido, fecha_ingreso, dni, productividad, codigo_vivero(FK), historico_puesto);
-La relacion vivero-empleado propaga los atributos codigo_vivero(FK) e historico_puesto a la relacion empleado.
+     - vivero-empleado [Empleado] (codigo_empleado, nombre, primer_apellido, segundo_apellido, fecha_ingreso, dni, productividad, codigo_vivero(FK));
+La relacion vivero-empleado propaga el atributo codigo_vivero(FK) a la relacion empleado. También debería propagarse historico_puesto pero debido a que es un atributo multivaluado se crea una nueva tabla específica.
 
-     - zona-empleado [Empleado] (codigo_empleado, codigo_zona(FK), codigo_vivero);
-La relacion zona-empleado propaga los atributos codigo_zona(FK) y tarea a la relacion empleado.
+     - zona-empleado [Empleado] (codigo_empleado, nombre, primer_apellido, segundo_apellido, fecha_ingreso, dni, productividad, codigo_vivero(FK), (codigo_vivero, codigo_zona)(FK), tarea);
+La relacion zona-empleado propaga los atributos (codigo_vivero, codigo_zona)(FK) y tarea a la relacion empleado.
 
      - empleado-pedido [Pedido] (codigo_pedido, fecha, codigo_empleado(FK));
-La relacion empleado-pedido propaga los atributos codigo_empeado(FK) a la relacion pedido.
+La relacion empleado-pedido propaga el atributo codigo_empeado(FK) a la relacion pedido.
 
      - cliente_fidelizado-pedido [Pedido] (codigo_pedido, fecha, codigo_cliente(FK));
-La relacion cliente_fidelizado-pedido propaga los atributos _codigo_cliente(FK) a la relacion pedido.
+La relacion cliente_fidelizado-pedido propaga el atributo codigo_cliente(FK) a la relacion pedido.
 
 ### 3. Relaciones N:M (Tabla)
      - producto_pedido (codigo_producto, codigo_pedido);
