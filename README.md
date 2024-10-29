@@ -37,7 +37,8 @@ La relacion producto_pedido usa las dos claves primarias de producto y de pedido
      - zona_producto (codigo_zona, codigo_vivero, codigo_producto, stock);
 La relacion zona_producto usa las dos claves primarias de zona y de producto ademas del atributo stock.
 
-## 3. Tablas
+## 3. Tablas:
+
 ### 1. Viveros
    
 ![image](https://github.com/user-attachments/assets/43a20670-0cff-4ba1-9ba8-2fc576e79c54)
