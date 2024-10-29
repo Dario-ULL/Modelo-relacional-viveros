@@ -17,16 +17,16 @@
 
 ### 2. Relaciones 1:N
 
-     - vivero-empleado [Empleado] (codigo_empleado, nombre, primer_apellido, segundo_apellido, fecha_ingreso, dni, productividad, **codigo_vivero(FK)**, **historico_puesto**);
+     - vivero-empleado [Empleado] (codigo_empleado, nombre, primer_apellido, segundo_apellido, fecha_ingreso, dni, productividad, codigo_vivero(FK), historico_puesto);
 La relacion vivero-empleado propaga los atributos codigo_vivero(FK) e historico_puesto a la relacion empleado.
 
-     - zona-empleado [Empleado] (codigo_empleado, **codigo_zona(FK)**, **codigo_vivero**);
-La relacion zona-empleado propaga los atributos **codigo_zona(FK)** y tarea a la relacion empleado.
+     - zona-empleado [Empleado] (codigo_empleado, codigo_zona(FK), codigo_vivero);
+La relacion zona-empleado propaga los atributos codigo_zona(FK) y tarea a la relacion empleado.
 
-     - empleado-pedido [Pedido] (codigo_pedido, fecha, **codigo_empleado(FK)**);
+     - empleado-pedido [Pedido] (codigo_pedido, fecha, codigo_empleado(FK));
 La relacion empleado-pedido propaga los atributos codigo_empeado(FK) a la relacion pedido.
 
-     - cliente_fidelizado-pedido [Pedido] (codigo_pedido, fecha, **codigo_cliente(FK)**);
+     - cliente_fidelizado-pedido [Pedido] (codigo_pedido, fecha, codigo_cliente(FK));
 La relacion cliente_fidelizado-pedido propaga los atributos _codigo_cliente(FK) a la relacion pedido.
 
 ### 3. Relaciones N:M (Tabla)
