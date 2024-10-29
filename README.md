@@ -11,23 +11,22 @@
      - historico_puesto (codigo_empleado, codigo_vivero, fecha);
 
 ## 2. Relaciones: 
-<u>Este texto está subrayado</u>
 
 ### 1. Relacion Debil
      - vivero-zona (codigo_vivero, codigo_zona, nombre, latitud, longitud, productividad);
 
 ### 2. Relaciones 1:N
 
-     - vivero-empleado [Empleado] (codigo_empleado, nombre, primer_apellido, segundo_apellido, fecha_ingreso, dni, productividad, <u>codigo_vivero(FK)</u>, <u>historico_puesto</u>);
+     - vivero-empleado [Empleado] (codigo_empleado, nombre, primer_apellido, segundo_apellido, fecha_ingreso, dni, productividad, **codigo_vivero(FK)**, **historico_puesto**);
 La relacion vivero-empleado propaga los atributos codigo_vivero(FK) e historico_puesto a la relacion empleado.
 
-     - zona-empleado [Empleado] (codigo_empleado, <u>codigo_zona(FK)</u>, <u>codigo_vivero</u>);
+     - zona-empleado [Empleado] (codigo_empleado, **codigo_zona(FK)**, **codigo_vivero**);
 La relacion zona-empleado propaga los atributos codigo_zona(FK) y tarea a la relacion empleado.
 
-     - empleado-pedido [Pedido] (codigo_pedido, fecha, <u>codigo_empleado(FK)</u>);
+     - empleado-pedido [Pedido] (codigo_pedido, fecha, **codigo_empleado(FK)**);
 La relacion empleado-pedido propaga los atributos codigo_empeado(FK) a la relacion pedido.
 
-     - cliente_fidelizado-pedido [Pedido] (codigo_pedido, fecha, <u>codigo_cliente(FK)</u>);
+     - cliente_fidelizado-pedido [Pedido] (codigo_pedido, fecha, **codigo_cliente(FK)**);
 La relacion cliente_fidelizado-pedido propaga los atributos _codigo_cliente(FK) a la relacion pedido.
 
 ### 3. Relaciones N:M (Tabla)
