@@ -11,6 +11,7 @@
      - historico_puesto (codigo_empleado, codigo_vivero, fecha);
 
 ## 2. Relaciones: 
+<u>Este texto está subrayado</u>
 
 ### 1. Relacion Debil
      - vivero-zona (codigo_vivero, codigo_zona, nombre, latitud, longitud, productividad);
