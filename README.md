@@ -21,7 +21,7 @@
 La relacion vivero-empleado propaga los atributos codigo_vivero(FK) e historico_puesto a la relacion empleado.
 
      - zona-empleado [Empleado] (codigo_empleado, **codigo_zona(FK)**, **codigo_vivero**);
-La relacion zona-empleado propaga los atributos codigo_zona(FK) y tarea a la relacion empleado.
+La relacion zona-empleado propaga los atributos **codigo_zona(FK)** y tarea a la relacion empleado.
 
      - empleado-pedido [Pedido] (codigo_pedido, fecha, **codigo_empleado(FK)**);
 La relacion empleado-pedido propaga los atributos codigo_empeado(FK) a la relacion pedido.
