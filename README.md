@@ -38,41 +38,41 @@ La relacion producto_pedido usa las dos claves primarias de producto y de pedido
 La relacion zona_producto usa las dos claves primarias de zona y de producto ademas del atributo stock.
 
 ## 3. Tablas
-1. Viveros
+### 1. Viveros
    
-     ![image](https://github.com/user-attachments/assets/43a20670-0cff-4ba1-9ba8-2fc576e79c54)
+![image](https://github.com/user-attachments/assets/43a20670-0cff-4ba1-9ba8-2fc576e79c54)
    
-3. Zona
+### 2. Zona
    
-     ![image](https://github.com/user-attachments/assets/01c000d4-ee17-4184-92df-e29725461696)
+![image](https://github.com/user-attachments/assets/01c000d4-ee17-4184-92df-e29725461696)
    
-5. Empleado
+### 3. Empleado
    
-     ![image](https://github.com/user-attachments/assets/3feb0a1b-0c08-4250-aeff-2e1bee706912)
+![image](https://github.com/user-attachments/assets/3feb0a1b-0c08-4250-aeff-2e1bee706912)
    
-7. Historico Puesto
+### 4. Historico Puesto
    
-     ![image](https://github.com/user-attachments/assets/154eed2f-4a84-4ffc-a490-fedbebbfa9bc)
+![image](https://github.com/user-attachments/assets/154eed2f-4a84-4ffc-a490-fedbebbfa9bc)
    
-9. Cliente Fidelizado
+### 5. Cliente Fidelizado
     
-     ![image](https://github.com/user-attachments/assets/eed7305f-e28a-457f-af93-d2345b2dbb70)
+![image](https://github.com/user-attachments/assets/eed7305f-e28a-457f-af93-d2345b2dbb70)
    
-11. Pedido
+### 6. Pedido
     
-     ![image](https://github.com/user-attachments/assets/7f7d3737-038a-4adc-ac74-2b0c0530c803)
+![image](https://github.com/user-attachments/assets/7f7d3737-038a-4adc-ac74-2b0c0530c803)
     
-13. Producto
+### 7. Producto
     
-     ![image](https://github.com/user-attachments/assets/0191c1c8-5310-43da-abf9-85bb3ba52bf6)
+![image](https://github.com/user-attachments/assets/0191c1c8-5310-43da-abf9-85bb3ba52bf6)
     
-15. Pedido-Producto
+### 8. Pedido-Producto
     
-     ![image](https://github.com/user-attachments/assets/cfda4ff7-73e5-4ab5-9347-cf80551d187a)
+![image](https://github.com/user-attachments/assets/cfda4ff7-73e5-4ab5-9347-cf80551d187a)
     
-17. Zona-Producto
+### 9. Zona-Producto
     
-     ![image](https://github.com/user-attachments/assets/4b070ddc-3d73-4b60-9e71-47edaa65a96e)
+![image](https://github.com/user-attachments/assets/4b070ddc-3d73-4b60-9e71-47edaa65a96e)
     
 
 
